@@ -22,7 +22,7 @@ public class ResumeRefreshTest {
 		
 	}
 	@Test
-	public void DoRefresh() throws InterruptedException{
+	public void DoRefresh() {
 		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5L, TimeUnit.SECONDS);
