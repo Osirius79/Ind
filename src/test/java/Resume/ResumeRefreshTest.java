@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -52,14 +53,13 @@ public class ResumeRefreshTest {
 		driver.findElement(By.xpath("//div[@id='container']/div/div[2]/div/div[2]/div[1]/div[13]/div[2]/div/div/div/div[1]/a/img")).click();
 		
 		//Clicking SaveButton to save and refresh my resume
-		driver.findElement(By.xpath("//div[@id='container']//button[text()='Save']")).click();
-
-		
-
-		
-
-		
-		
+		driver.findElement(By.xpath("//div[@id='container']//button[text()='Save']")).click();	
 	}
 
+	
+	@AfterMethod
+	public void teardown(){
+		driver.quit();
+		
+	}
 }
